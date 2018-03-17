@@ -2,6 +2,10 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+//process.env contains all environment variables
+//PORT will be set by Heroku and it will change each time the app is deployed
+const port = process.env.PORT || 3000;
+
 var app = express();
 
 //This allows us to reuse parts of HTML which repeats across different pages
@@ -68,6 +72,6 @@ app.get('/bad', (req, res)=>{
 });
 
 //binds the application to a port on local host
-app.listen(3000, ()=>{
-    console.log('Server started');
+app.listen(port, ()=>{
+    console.log(`Server started on port ${port}`);
 });
