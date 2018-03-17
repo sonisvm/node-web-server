@@ -71,6 +71,12 @@ app.get('/bad', (req, res)=>{
     });
 });
 
+app.get('/projects', (req, res)=>{
+    res.render('projects.hbs',{
+        pageTitle:'Projects'
+    });
+});
+
 //binds the application to a port on local host
 app.listen(port, ()=>{
     console.log(`Server started on port ${port}`);
