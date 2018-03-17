@@ -35,9 +35,9 @@ app.use((req, res, next)=>{
     next();
 });
 
-app.use((req, res, next)=>{
-    res.render('maintainence.hbs');
-});
+// app.use((req, res, next)=>{
+//     res.render('maintainence.hbs');
+// });
 
 //app.use can be used to register middleware
 //__dirname stores the path to project directory
